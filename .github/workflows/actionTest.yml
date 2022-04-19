@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0
       
       - name: Test action
-        uses: HDRIAKHOA/custom-action-test
+        uses: HDRIAKHOA/custom-action-test@main
         id: action_test
         with:
           test_input: 'HELLO'
