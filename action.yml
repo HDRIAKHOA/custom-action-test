@@ -1,0 +1,16 @@
+# action.yml
+name: "Custom Action Test Name"
+description: "Custom Action Test Description"
+inputs:
+  test_input:
+    description: "test_input description"
+    required: false
+    default: 1
+outputs:
+  test_output:
+    description: "test_input description"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.test_input}}

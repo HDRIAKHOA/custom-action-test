@@ -1,0 +1,20 @@
+name: actionTest
+
+on:
+  workflow_dispatch:
+
+jobs:
+  actionTest:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      
+      - name: Test action
+        uses: HDRIAKHOA/custom-action-test
+        id: action_test
+        with:
+          test_input: 'HELLO'
